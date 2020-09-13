@@ -1,0 +1,36 @@
+{
+  "name": "react-circular-gradient-progress",
+  "version": "1.0.0",
+  "description": "Display progress in a circle fashion",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doumart/react-circular-progress.git"
+  },
+  "keywords": [
+    "circular",
+    "progress",
+    "progression",
+    "svg",
+    "circle",
+    "Gradient"
+  ],
+  "author": "Dominique Richard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/doumart/react-circular-progress/issues"
+  },
+  "homepage": "https://github.com/doumart/react-circular-progress#readme",
+  "devDependencies": {
+    "@types/node": "^12.7.4",
+    "@types/react": "^16.9.49",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "react": "^16.13.1"
+  }
+}

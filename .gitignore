@@ -1,0 +1,12 @@
+.DS_STORE
+node_modules
+.grunt
+lib/
+remote-repo/
+coverage/
+*.log*
+*.sublime-project
+*.sublime-workspace
+.idea
+*.iml
+.vscode
