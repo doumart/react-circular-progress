@@ -1,4 +1,4 @@
-import GradientCircularProgress, { GradientCircularProgressProps } from "GradientCircularProgress"
+import GradientCircularProgress, { GradientCircularProgressProps } from "./GradientCircularProgress"
 import React from "react"
 
 interface CircularProgressProps extends Omit<GradientCircularProgressProps, "startColor" | "middleColor" | "endColor"> {
@@ -9,7 +9,6 @@ const CircularProgress: React.FunctionComponent<CircularProgressProps> = ({
   color,
   ...props
 }) => {
-
   return (
     <GradientCircularProgress
       {...props}

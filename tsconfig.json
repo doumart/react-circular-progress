@@ -9,7 +9,7 @@
     "jsx": "react",
     "declaration": true,
     "outDir": "./lib",
-    "strict": true
+    "strict": true,
   },
   "include": [
     "src"
