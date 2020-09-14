@@ -62,7 +62,7 @@ Component accepts several self-descriptive properties:
   
   
 ## Circular Progress with snail
-![Alt text](/../master/githubAssets/CircularProgressWithSnail.png?raw=true "Circular Progress with snail")
+![Alt text](/../master/githubAssets/CircularProgressWithSnail.PNG?raw=true "Circular Progress with snail")
 
 ## Gradient Circular Progress
-![Alt text](/../master/githubAssets/CircularProgress.png?raw=true "Gradient Circular Progress")
+![Alt text](/../master/githubAssets/CircularProgress.PNG?raw=true "Gradient Circular Progress")
