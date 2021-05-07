@@ -1,5 +1,9 @@
 import React from "react"
 
+function id(): string {
+  return '_' + Math.random().toString(36).substr(2, 9);
+}
+
 export interface GradientCircularProgressProps {
   progress: number;
   size: number;
@@ -42,6 +46,8 @@ const GradientCircularProgress: React.FunctionComponent<GradientCircularProgress
   const firstHalfProg = progress > DIAMETER ? 1 : progress / DIAMETER
   const secondHalfProg = progress <= DIAMETER ? 0 : (progress - DIAMETER) / DIAMETER
   const halfCircumference = ((Math.PI * 2) * (DIAMETER / 2) / 2)
+  const firstHalfGradientId = id();
+  const secondHalfGradientId = id();
 
   return (
     <div
@@ -50,12 +56,12 @@ const GradientCircularProgress: React.FunctionComponent<GradientCircularProgress
     >
       <svg viewBox={`0 0 ${WIDTH} ${WIDTH}`}>
         <defs>
-          <linearGradient id="firstHalfGradient" x1="50%" y1="0%" x2="0%" y2="100%">
+          <linearGradient id={firstHalfGradientId} x1="50%" y1="0%" x2="0%" y2="100%">
             <stop offset="0%" stopColor={startColor} />
             <stop offset="90%" stopColor={middleColor} />
           </linearGradient>
 
-          <linearGradient id="secondHalfGradient" x1="0%" y1="0%" x2="50%" y2="100%">
+          <linearGradient id={secondHalfGradientId} x1="0%" y1="0%" x2="50%" y2="100%">
             <stop offset="0%" stopColor={endColor} />
             <stop offset="90%" stopColor={middleColor} />
           </linearGradient>
@@ -76,7 +82,7 @@ const GradientCircularProgress: React.FunctionComponent<GradientCircularProgress
         <path
           className={classes?.indicator.progression}
           fill="none"
-          stroke="url(#firstHalfGradient)"
+          stroke={`url(#${firstHalfGradientId})`}
           strokeDasharray={`${firstHalfProg * halfCircumference},${halfCircumference}`}
           strokeLinecap="round"
           d={`
@@ -90,7 +96,7 @@ const GradientCircularProgress: React.FunctionComponent<GradientCircularProgress
           <path
             className={classes?.indicator.progression}
             fill="none"
-            stroke="url(#secondHalfGradient)"
+            stroke={`url(#${secondHalfGradientId})`}
             strokeDasharray={`${secondHalfProg * halfCircumference},${halfCircumference}`}
             strokeLinecap="round"
             d={`
