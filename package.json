@@ -1,6 +1,6 @@
 {
   "name": "react-circular-gradient-progress",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Display progress in a circle fashion",
   "main": "lib/index.js",
   "scripts": {
